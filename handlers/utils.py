@@ -1,5 +1,3 @@
-"""Shared handler utilities."""
-
 from __future__ import annotations
 
 import logging
@@ -15,7 +13,6 @@ async def answer_callback(
     *,
     show_alert: bool = False,
 ) -> None:
-    """Answer a callback query; ignore if already answered."""
     try:
         await callback.answer(text, show_alert=show_alert)
     except Exception:

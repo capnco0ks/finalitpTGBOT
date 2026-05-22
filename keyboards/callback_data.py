@@ -1,5 +1,3 @@
-"""Central callback_data values — must match handler filters exactly."""
-
 
 class MenuCallback:
     MAIN = "menu:main"

@@ -1,4 +1,3 @@
-"""My Materials, summaries, and flashcards."""
 
 from __future__ import annotations
 

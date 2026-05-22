@@ -1,4 +1,3 @@
-"""User profile and leaderboard."""
 
 from __future__ import annotations
 

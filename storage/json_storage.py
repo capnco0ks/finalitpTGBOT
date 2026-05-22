@@ -1,5 +1,3 @@
-"""JSON-based persistence layer with corruption recovery."""
-
 from __future__ import annotations
 
 import asyncio
@@ -17,7 +15,6 @@ logger = logging.getLogger(__name__)
 
 
 class JSONStorage:
-    """Thread-safe async JSON file storage."""
 
     def __init__(self, users_path: Path, cache_path: Path | None = None) -> None:
         self.users_path = users_path

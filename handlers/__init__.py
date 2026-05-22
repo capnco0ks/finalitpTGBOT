@@ -1,4 +1,4 @@
-"""Handler routers — registration is done in main.register_routers()."""
+
 
 from handlers.callbacks import router as callbacks_fallback_router
 from handlers.documents import router as documents_router

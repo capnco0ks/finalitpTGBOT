@@ -1,5 +1,3 @@
-"""Abstract base parser — inheritance & polymorphism entry point."""
-
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
@@ -7,17 +5,16 @@ from pathlib import Path
 
 
 class ParserError(Exception):
-    """Raised when file parsing fails."""
+    """raised when file parsing fails"""
 
 
 class BaseParser(ABC):
-    """Base class for all document parsers."""
 
     extensions: tuple[str, ...] = ()
 
     @abstractmethod
     def parse(self, file_path: Path) -> str:
-        """Extract plain text from a file."""
+        """extract plain text from a file"""
 
     def supports(self, file_path: Path) -> bool:
         return file_path.suffix.lower() in self.extensions
@@ -34,7 +31,7 @@ class BaseParser(ABC):
             raise ParserError("File is empty.")
 
     def extract(self, file_path: Path) -> str:
-        """Template method: validate then parse (polymorphic dispatch)."""
+        
         self.validate(file_path)
         text = self.parse(file_path)
         cleaned = text.strip()

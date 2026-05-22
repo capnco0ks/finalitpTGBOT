@@ -1,9 +1,3 @@
-"""
-AI Study Assistant — Telegram Bot entry point (legacy).
-
-Run: python main.py  (preferred)
-     python bot.py   (delegates to main)
-"""
 
 from __future__ import annotations
 

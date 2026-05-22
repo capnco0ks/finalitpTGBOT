@@ -1,5 +1,3 @@
-"""Orchestrates parsing, AI generation, and persistence."""
-
 from __future__ import annotations
 
 import logging
@@ -25,7 +23,6 @@ URL_PATTERN = re.compile(r"https?://\S+", re.IGNORECASE)
 
 
 class StudyService:
-    """High-level business logic for study material processing."""
 
     def __init__(self, storage: JSONStorage, ai_service: AIService) -> None:
         self.storage = storage

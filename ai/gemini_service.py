@@ -46,11 +46,8 @@ Text:
 
 
 class AIServiceError(Exception):
-    """Raised when OpenRouter API calls fail."""
-
-
+    """raised when API fail"""
 class AIService:
-    """Handles AI generation via OpenRouter with optional caching."""
 
     def __init__(
         self,
@@ -72,7 +69,6 @@ class AIService:
 
     @staticmethod
     def split_paragraph_chunks(text: str, max_chunk_chars: int = MAX_CHUNK_CHARS) -> list[str]:
-        """Split text into paragraph-based chunks capped by max_chunk_chars."""
         stripped = text.strip()
         if not stripped:
             return []
@@ -117,7 +113,6 @@ class AIService:
         max_total_chars: int = MAX_AI_INPUT_CHARS,
         max_chunk_chars: int = MAX_CHUNK_CHARS,
     ) -> str:
-        """Join paragraph chunks until the input budget is reached."""
         chunks = cls.split_paragraph_chunks(text, max_chunk_chars=max_chunk_chars)
         if not chunks:
             return ""

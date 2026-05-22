@@ -1,5 +1,3 @@
-"""PPTX text extraction using python-pptx."""
-
 from __future__ import annotations
 
 from pathlib import Path

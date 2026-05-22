@@ -1,4 +1,3 @@
-"""Plain text file parser."""
 
 from __future__ import annotations
 

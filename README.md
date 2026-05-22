@@ -35,12 +35,6 @@ finalitpTGBOT/
 - **Polymorphism**: `ParserFactory.extract_text()` calls `parser.extract()` on the correct subclass
 - **Domain classes**: `User`, `Material`, `Quiz`, `QuizSession`, `AIService`
 
-## Requirements
-
-- Python 3.10+
-- Telegram Bot Token ([@BotFather](https://t.me/BotFather))
-- OpenRouter API key ([OpenRouter](https://openrouter.ai/keys))
-
 ## Setup
 
 1. **Clone or copy** the project folder.
@@ -76,7 +70,6 @@ finalitpTGBOT/
    ```
 
    Edit `.env` and set:
-
    - `BOT_TOKEN` — from BotFather
    - `OPENROUTER_API_KEY` — from OpenRouter
 
@@ -88,18 +81,18 @@ finalitpTGBOT/
 
 ## Usage
 
-| Action | How |
-|--------|-----|
-| Start | `/start` or open the bot |
-| Upload file | Send PDF / PPTX / TXT as a **document** |
-| Paste notes | Send a text message |
-| Link (optional) | Send a URL (short message with link) |
-| My Materials | Reply button or inline menu |
-| Flashcards | Material → Flashcards → navigate with buttons |
-| Quiz | **Start Quiz** → pick material → answer with inline buttons |
-| Profile | View score, materials count, streak |
-| Leaderboard | Top users by score |
-| Motivation | Daily motivational message |
+| Action          | How                                                         |
+| --------------- | ----------------------------------------------------------- |
+| Start           | `/start` or open the bot                                    |
+| Upload file     | Send PDF / PPTX / TXT as a **document**                     |
+| Paste notes     | Send a text message                                         |
+| Link (optional) | Send a URL (short message with link)                        |
+| My Materials    | Reply button or inline menu                                 |
+| Flashcards      | Material → Flashcards → navigate with buttons               |
+| Quiz            | **Start Quiz** → pick material → answer with inline buttons |
+| Profile         | View score, materials count, streak                         |
+| Leaderboard     | Top users by score                                          |
+| Motivation      | Daily motivational message                                  |
 
 ## Data storage
 
@@ -118,7 +111,7 @@ finalitpTGBOT/
         "id": "a1b2c3d4",
         "title": "Lecture Notes",
         "summary": "...",
-        "flashcards": [{"question": "...", "answer": "..."}],
+        "flashcards": [{ "question": "...", "answer": "..." }],
         "quiz": [
           {
             "question": "...",

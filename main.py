@@ -1,8 +1,4 @@
-"""
-AI Study Assistant — application entry point.
 
-Run: python main.py
-"""
 
 from __future__ import annotations
 
@@ -64,7 +60,6 @@ async def on_error(event: ErrorEvent) -> None:
 
 
 def register_routers(dp: Dispatcher) -> None:
-    """Register routers; reply_menu before text so menu buttons are handled."""
     dp.include_router(start_router)
     dp.include_router(reply_menu_router)
     dp.include_router(documents_router)

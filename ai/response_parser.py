@@ -1,5 +1,3 @@
-"""Parse structured JSON from AI responses into domain objects."""
-
 from __future__ import annotations
 
 import json
@@ -18,8 +16,7 @@ _MAX_OPTION_LEN = 60
 
 
 class AIResponseParser:
-    """Converts raw AI text into Material components."""
-
+    
     @staticmethod
     def _extract_json_block(text: str) -> str:
         text = text.strip()

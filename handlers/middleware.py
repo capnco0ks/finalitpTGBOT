@@ -1,4 +1,3 @@
-"""Dispatcher middleware."""
 
 from __future__ import annotations
 
@@ -14,8 +13,6 @@ logger = logging.getLogger(__name__)
 
 
 class CallbackLogMiddleware(BaseMiddleware):
-    """Log every callback_query before handlers run."""
-
     async def __call__(
         self,
         handler: Callable[[TelegramObject, dict[str, Any]], Awaitable[Any]],

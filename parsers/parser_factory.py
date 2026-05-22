@@ -1,5 +1,3 @@
-"""Factory for polymorphic parser selection."""
-
 from __future__ import annotations
 
 from pathlib import Path
@@ -11,7 +9,7 @@ from parsers.txt_parser import TXTParser
 
 
 class ParserFactory:
-    """Returns the correct parser instance based on file extension."""
+    """returns the correct parser instance based on file extension"""
 
     _parsers: tuple[BaseParser, ...] = (
         PDFParser(),
@@ -30,6 +28,5 @@ class ParserFactory:
 
     @classmethod
     def extract_text(cls, file_path: Path) -> str:
-        """Polymorphic extraction — same interface, different implementations."""
         parser = cls.get_parser(file_path)
         return parser.extract(file_path)

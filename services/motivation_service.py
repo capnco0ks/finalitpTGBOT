@@ -1,5 +1,3 @@
-"""Daily motivation messages (bonus feature)."""
-
 from __future__ import annotations
 
 import random
@@ -18,7 +16,6 @@ MOTIVATIONS = [
 
 
 class MotivationService:
-    """Provides deterministic daily motivation per user."""
 
     @classmethod
     def daily_message(cls, user_id: int, streak: int = 0) -> str:

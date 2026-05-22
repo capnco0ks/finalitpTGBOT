@@ -1,4 +1,3 @@
-"""Document upload handler."""
 
 from __future__ import annotations
 
